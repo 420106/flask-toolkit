@@ -13,7 +13,8 @@ def index():
         file = form.file.data
         mger = Script_Manager()
         output = mger.invoke(task, file)
-        file_path = current_app.config['TEMP_FILES'] + file.filename
-        mger.save(output, file_path)
-        return send_file(file_path)
+        filename = current_app.config['TEMP_FILES'] + '\\' + file.filename
+        filename_ = mger.save(output, filename)
+        return send_file(filename_, as_attachment = True)
+        # How to remove the temp file after the return
     return render_template('index.html', form = form)

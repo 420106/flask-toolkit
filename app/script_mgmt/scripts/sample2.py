@@ -4,5 +4,8 @@ def main(file):
     return sample2(file)
 
 def sample2(file):
-    df = pd.read_csv(file)
+    if file.filename.endswith('csv'):
+        df = pd.read_csv(file)
+    elif file.filename.endswith('xlsx'):
+        df = pd.read_excel(file)
     return df

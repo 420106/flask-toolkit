@@ -4,7 +4,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
     SECRET_KEY = 'sliu'
-    TEMP_FILES = os.path.abspath('app\\script_mgmt\\temp\\__init__.py')
+    TEMP_FILES = os.path.abspath('app\\script_mgmt\\temp\\')
 
     @staticmethod
     def init_app(app):
