@@ -4,7 +4,16 @@
 {% block title %}Index Page{% endblock %}
 
 {% block content %}
-  <div class="" style="width:30%; margin:auto">
-    {{ wtf.quick_form(form) }}
+{{ super() }}
+
+<div class="" style="height:120px"></div>
+<div class="" style="">
+  <div class="" style="width:30%; margin:auto; padding:30px 30px 45px 30px;
+  border-style:groove; border-radius:30px;
+  background-color:#F5EEF8; border-color:#A569BD; color:#5B2C6F">
+    {{ wtf.quick_form(form, button_map = {'submit': 'success'}) }}
   </div>
+</div>
+<div class="" style="height:120px"></div>
+
 {% endblock %}
