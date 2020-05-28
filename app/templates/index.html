@@ -5,15 +5,17 @@
 
 {% block content %}
 {{ super() }}
-
-<div class="" style="height:120px"></div>
-<div class="" style="">
-  <div class="" style="width:30%; margin:auto; padding:30px 30px 45px 30px;
-  border-style:groove; border-radius:30px;
-  background-color:#F5EEF8; border-color:#A569BD; color:#5B2C6F">
-    {{ wtf.quick_form(form, button_map = {'submit': 'success'}) }}
+<body style="background-image:url(static/img/bg-img.png); background-size:cover">
+  <div class="" style="height:200px; text-align:center">
+    <img src="static/img/logo.png" alt="" style="height:100px; width:100px; margin:50px">
   </div>
-</div>
-<div class="" style="height:120px"></div>
-
+  <div class="" style="">
+    <div class="" style="width:30%; margin:auto; padding:30px 30px 45px 30px;
+    border-style:groove; border-radius:30px;
+    background-color:#F5EEF8; border-color:#A569BD; color:#5B2C6F">
+      {{ wtf.quick_form(form, button_map = {'submit': 'warning'}) }}
+    </div>
+  </div>
+  <div class="" style="height:200px"></div>
+</body>
 {% endblock %}
