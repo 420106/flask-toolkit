@@ -1,7 +1,7 @@
 class Manager():
     script_list = [
-        ('sample', 'sample'),
-        ('sample2', 'sample2')
+        ('sample 1', 'sample 1 - spreadsheet masking'),
+        ('sample 2', 'sample 2 - xml masking')
     ]
 
     @staticmethod
@@ -28,8 +28,3 @@ class Manager():
             output.to_csv(filename, index = False)
 
         return filename
-
-    # @staticmethod
-    # def delete(filename):
-    #     from os import remove
-    #     remove(filename)
