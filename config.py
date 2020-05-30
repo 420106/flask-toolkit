@@ -26,6 +26,7 @@ class ProductionConfig(Config):
 class HerokuConfig(ProductionConfig):
     SSL_REDIRECT = True if os.environ.get('DYNO') else False
 
+    @classmethod
     def init_app(cls, app):
         ProductionConfig.init_app(app)
         from werkzeug.middleware.proxy_fix import ProxyFix
