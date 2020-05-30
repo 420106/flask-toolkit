@@ -9,6 +9,9 @@ def create_app(config_name):
     app.config.from_object(config[config_name])
     config[config_name].init_app(app)
     bootstrap.init_app(app)
+    if app.config['SSL_REDIRECT']:
+        from flask_talisman import Talisman
+        Talisman(app)
 
     from .main import main
     app.register_blueprint(main)
