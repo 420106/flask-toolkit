@@ -11,7 +11,13 @@ def create_app(config_name):
     bootstrap.init_app(app)
     if app.config['SSL_REDIRECT']:
         from flask_talisman import Talisman
-        Talisman(app)
+        csp = {
+            'default-src': [
+                '\\self\\',
+                'cdnjs.cloudflare.com'
+                ]
+        }
+        Talisman(app, content_security_policy = csp)
 
     from .main import main
     app.register_blueprint(main)
