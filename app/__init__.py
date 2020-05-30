@@ -13,7 +13,7 @@ def create_app(config_name):
         from flask_talisman import Talisman
         csp = {
             'default-src': [
-                '\\self\\',
+                '\'self\'',
                 'cdnjs.cloudflare.com'
                 ]
         }
