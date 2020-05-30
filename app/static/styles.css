@@ -1,0 +1,33 @@
+body {
+  background-image: url(img/bg-img.png);
+  background-size: cover;
+}
+
+.logo {
+   height:100px;
+   width:100px;
+   margin:50px;
+}
+
+div.up {
+  height:200px;
+  text-align:center;
+}
+
+div.mid {
+  height:200px;
+}
+
+div.down {
+  height:200px;
+}
+
+form.main {
+  width: 30%;
+  margin: auto;
+  padding: 30px 30px 45px 30px;
+  border-style: groove;
+  border-radius: 30px;
+  background-color: #F5EEF8;
+  color: #5B2C6F;
+}
