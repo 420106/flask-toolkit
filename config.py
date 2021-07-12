@@ -3,7 +3,7 @@ import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
-    SECRET_KEY = 'sliu'
+    SECRET_KEY = 'secret'
     SSL_REDIRECT = False
     TEMP_FILES = os.path.abspath('app\\script_mgmt\\temp\\')
 
